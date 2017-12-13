@@ -46,12 +46,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDF-rT-pAx">
+                                <rect key="frame" x="20" y="310" width="335" height="62.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdv-CL-bgV">
+                                <rect key="frame" x="164.5" y="387.5" width="46" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgB-g5-FKd">
+                                <rect key="frame" x="20" y="607" width="335" height="40"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QCi-H8-uPU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Cg0-tT-qcD" firstAttribute="top" secondItem="Fk2-Cc-02I" secondAttribute="bottom" constant="40" id="54E-QQ-HvO"/>
+                            <constraint firstItem="eDF-rT-pAx" firstAttribute="leading" secondItem="d07-Px-XMX" secondAttribute="leading" id="6dw-FL-SIu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZgB-g5-FKd" secondAttribute="bottom" constant="20" id="6t1-N5-YLc"/>
                             <constraint firstItem="d07-Px-XMX" firstAttribute="top" secondItem="Cg0-tT-qcD" secondAttribute="bottom" constant="25" id="BeW-La-Z6F"/>
                             <constraint firstItem="Fk2-Cc-02I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="I5z-52-WhM"/>
+                            <constraint firstItem="Vdv-CL-bgV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IVH-SF-lBj"/>
+                            <constraint firstItem="eDF-rT-pAx" firstAttribute="top" secondItem="d07-Px-XMX" secondAttribute="bottom" constant="50" id="Jcc-MN-lqA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hem-Cy-8v9" secondAttribute="trailing" id="Jeu-KV-qrg"/>
                             <constraint firstItem="Cg0-tT-qcD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="L5d-oJ-FQI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cg0-tT-qcD" secondAttribute="trailing" constant="20" id="SVU-si-A8j"/>
@@ -60,12 +85,19 @@
                             <constraint firstItem="d07-Px-XMX" firstAttribute="leading" secondItem="Cg0-tT-qcD" secondAttribute="leading" id="d7A-73-mRc"/>
                             <constraint firstItem="Fk2-Cc-02I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="er2-zC-5i9"/>
                             <constraint firstItem="d07-Px-XMX" firstAttribute="height" secondItem="Cg0-tT-qcD" secondAttribute="height" id="fUZ-hp-hNh"/>
+                            <constraint firstItem="Vdv-CL-bgV" firstAttribute="top" secondItem="eDF-rT-pAx" secondAttribute="bottom" constant="15" id="h3n-7M-K0Z"/>
+                            <constraint firstItem="ZgB-g5-FKd" firstAttribute="trailing" secondItem="d07-Px-XMX" secondAttribute="trailing" id="nGL-Ed-gA9"/>
+                            <constraint firstItem="ZgB-g5-FKd" firstAttribute="leading" secondItem="d07-Px-XMX" secondAttribute="leading" id="nuT-es-bNc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hem-Cy-8v9" secondAttribute="bottom" id="qoa-JA-VYS"/>
+                            <constraint firstItem="eDF-rT-pAx" firstAttribute="trailing" secondItem="d07-Px-XMX" secondAttribute="trailing" id="vO2-GK-GGo"/>
+                            <constraint firstItem="ZgB-g5-FKd" firstAttribute="height" secondItem="d07-Px-XMX" secondAttribute="height" id="vyk-wn-eQt"/>
                             <constraint firstItem="Hem-Cy-8v9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zgb-OZ-6nb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="calculatedValueLbl" destination="eDF-rT-pAx" id="h1C-fr-D9e"/>
+                        <outlet property="hoursLbl" destination="Vdv-CL-bgV" id="8F9-7V-Gd0"/>
                         <outlet property="priceTxt" destination="d07-Px-XMX" id="uQi-HP-e0c"/>
                         <outlet property="wageTxt" destination="Cg0-tT-qcD" id="7hr-Mh-ABw"/>
                     </connections>
